@@ -2,31 +2,35 @@
 <html>
 <head>
 <link rel="stylesheet" href="main.css">
-<script src="main.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <title>Directional Stock Prediction using Financial Newsand Viral Tweets</title>
 </head>
-<body>
-
-<h1>Directional Stock Prediction using Financial News and Viral Tweets</h1>
-<div id = "parent">
+<body bgcolor="black">
+<h1 style="color: #ffffff;">Directional Stock Prediction using Financial News and Viral Tweets</h1>
+<div id = "parent" style="color: #ffffff;">
     <form id = "form_login" onsubmit="return validateForm()">
-    <label for="news">Enter the news</label>
+    <label for="news" style="color: #ffffff;">Enter the news</label>
     <input type="text" id="news" name="news"><br><br>
-    <label for="ml_models">Select the machine learning model</label>
+    <label for="ml_models" style="color: #ffffff;">Select the machine learning model</label>
     <br><br>
     <input type="radio" id="model2" name="ml_models" value="RandomForest">
-    <label for="model2">Random Forest</label>
+    <label for="model2" style="color: #ffffff;">Random Forest</label>
     <input type="radio" id="model3" name="ml_models" value="SVM">
-    <label for="model3">SVM</label>
+    <label for="model3" style="color: #ffffff;">SVM</label>
     <input type="radio" id="model4" name="ml_models" value="LogisticRegression">
-    <label for="model4">Logistic Regression</label>
+    <label for="model4" style="color: #ffffff;">Logistic Regression</label>
     <br><br>
     <input type="submit" value="Submit">
 </form>
 </div>
 
-<h1 id = "demo"></h1>
+<h1 id = "demo" style="color: #ffffff;"></h1>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<p align="center">
+<canvas id="myChart" style="width:100%;max-width:600px;background:#ffffff;" ></canvas>
+</p>
+<script type="text/javascript" src="main.js"></script>
 
 </body>
 </html>

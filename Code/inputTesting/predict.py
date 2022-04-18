@@ -11,14 +11,12 @@
 
 
 import pickle
-import joblib
 import string
 import re
-import xgboost
 
 from nltk.corpus import stopwords, words
 from nltk import sent_tokenize,wordpunct_tokenize
-from nltk.stem import LancasterStemmer, PorterStemmer, SnowballStemmer
+from nltk.stem import SnowballStemmer
 
 # input_doc = sys.argv[1]
 # model = sys.argv[2]
@@ -100,9 +98,9 @@ def predictStockPrice(input_doc, model):
 
         label = y_pred[0]
         if 1 == label:
-            return "As per Logistic Regression model, following given news, the stock price will go up!"
+            return "1"
         elif -1 == label:
-            return "As per Logistic Regression model, following given news, the stock price will go down!"
+            return "0"
 
     elif(model == "RandomForest"):
         #testing input document on Random Forest
@@ -113,9 +111,9 @@ def predictStockPrice(input_doc, model):
 
         label = y_pred[0]
         if 1 == label:
-            return "As per Random Forest model, following given news, the stock price will go up!"
+            return "1"
         elif -1 == label:
-            return "As per Random Forest model, following given news, the stock price will go down!"
+            return "0"
 
     else:
         #testing input document on SVM
@@ -126,6 +124,6 @@ def predictStockPrice(input_doc, model):
 
         label = y_pred[0]
         if 1 == label:
-            return "As per SVM model, following given news, the stock price will go up!"
+            return "1"
         elif -1 == label:
-            return "As per SVM model, following given news, the stock price will go down!"
+            return "0"
